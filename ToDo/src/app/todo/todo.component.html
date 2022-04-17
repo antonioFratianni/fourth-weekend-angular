@@ -1,0 +1,22 @@
+
+<div id="myDIV" class="header">
+  <h2 style="color: rgb(250, 118, 5);">Todo </h2>
+  <input
+  #newItem
+  placeholder="add an item"
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput"
+/>  
+<!-- <span onclick="addItem(newItem.value)" class="addBtn">Add</span> -->
+<button class="addBtn" (click)="addItem(newItem.value)">Add</button>
+
+</div>
+
+
+
+<ul id="myUL">
+  <li *ngFor="let item of items">{{item.description}} </li>
+
+</ul>
+
